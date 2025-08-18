@@ -5,75 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asiya Begum | Portfolio</title>
   <style>
+    /* Global Dark Theme */
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
+      font-family: "Poppins", sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
       scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     /* Navbar */
     nav {
       position: sticky;
       top: 0;
-      background: #1e1e1e;
-      padding: 10px 20px;
+      background: #161b22;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
       z-index: 1000;
     }
+
     nav .logo {
-      font-size: 20px;
+      font-size: 1.5rem;
       font-weight: bold;
-      color: #f9a8d4;
+      color: #58a6ff;
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 1.5rem;
       margin: 0;
       padding: 0;
     }
+
     nav ul li a {
-      color: #f0f0f0;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    nav ul li a:hover {
-      color: #f9a8d4;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    /* Hero section */
-    header {
+    nav ul li a:hover, 
+    nav ul li a.active {
+      color: #58a6ff;
+    }
+
+    /* Hero Section */
+    .hero {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
-      background: #181818;
+      padding: 4rem 2rem;
+      text-align: center;
     }
-    header img {
-      width: 150px;
-      height: 150px;
+
+    .hero img {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
+      border: 3px solid #58a6ff;
+      margin-bottom: 1rem;
       object-fit: cover;
-      border: 3px solid #f9a8d4;
-      margin-right: 30px;
     }
-    header .intro {
-      max-width: 500px;
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      color: #e6edf3;
     }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #f9a8d4;
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #8b949e;
+      max-width: 600px;
     }
-    header p {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #ccc;
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #161b22;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
     }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Asiya Begum</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="your-image.jpg" alt="Asiya Begum">
+    <h1>Asiya Begum</h1>
+    <p>Aspiring Software Developer | Passionate about AI & Full Stack Development</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 
     /* Sections */
     section {
@@ -230,6 +302,7 @@
 
 </body>
 </html>
+
 
 
 
