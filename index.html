@@ -3,209 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asiya Begum | Portfolio</title>
-
+  <title>Asiya Begum - Portfolio</title>
   <style>
-    /* General Dark Theme */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #0f1115;
+      color: #e5e5e5;
       line-height: 1.6;
-      background: #121212;
-      color: #eaeaea;
     }
 
-    h1, h2, h3 {
-      margin-bottom: 10px;
-      color: #fff;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1c1f27, #101216);
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #6ee7b7;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+      color: #a78bfa;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #9ca3af;
     }
 
     section {
       padding: 40px 20px;
-      border-bottom: 1px solid #333;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    /* Hero Section */
-    .hero {
-      background: #1e1e1e;
-      color: #fff;
+    h2 {
       text-align: center;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .hero-title {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      opacity: 0.85;
-    }
-
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #444;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #ccc;
-      border: 3px solid #2980b9;
-    }
-
-    /* Skills Section */
-    #skills ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    #skills li {
-      background: #2c2c2c;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    /* Projects */
-    .project {
+      color: #6ee7b7;
       margin-bottom: 20px;
-      padding: 15px;
-      background: #1e1e1e;
-      border-left: 4px solid #2980b9;
-      border-radius: 6px;
     }
 
-    /* Certificates */
-    #certificates .cert-grid {
+    .skills, .projects, .certificates {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    #certificates img {
+    .card {
+      background-color: #1c1f27;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #f472b6;
+    }
+
+    .certificates img {
       width: 100%;
-      border-radius: 8px;
-      border: 2px solid #2980b9;
+      border-radius: 10px;
       transition: transform 0.3s;
     }
 
-    #certificates img:hover {
+    .certificates img:hover {
       transform: scale(1.05);
     }
 
-    /* Contact */
-    #contact a {
-      color: #3498db;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #101216;
+      color: #9ca3af;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #6ee7b7;
       text-decoration: none;
     }
 
-    #contact a:hover {
+    a:hover {
       text-decoration: underline;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-      section {
-        padding: 20px;
-      }
-      .hero-content {
-        flex-direction: column;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== Hero Section ===== -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="profile-pic">Your Photo</div>
-      <div>
-        <h1 class="hero-title">Asiya Begum</h1>
-        <p class="hero-subtitle">Aspiring AI & Web Developer | Cloud & Full-Stack Enthusiast</p>
-      </div>
-    </div>
+  <header>
+    <!-- Replace 'profile.jpg' with your real profile picture -->
+    <img src="profile.jpg" alt="Profile Picture">
+    <h1>Asiya Begum</h1>
+    <p>Aspiring AI Engineer | Web Developer | Problem Solver</p>
   </header>
 
-  <!-- ===== About Section ===== -->
-  <section id="about">
+  <section>
     <h2>About Me</h2>
     <p>
-      I am Asiya Begum, an enthusiastic developer passionate about Artificial Intelligence, 
-      Cloud, and Full-Stack Development. I enjoy solving real-world problems through innovative 
-      projects and continuously enhancing my technical and creative skills.
+      I am an aspiring software engineer with expertise in AI, web development, and modern technologies. 
+      Passionate about solving real-world problems, building scalable applications, and continuously learning new skills. 
     </p>
   </section>
 
-  <!-- ===== Skills Section ===== -->
-  <section id="skills">
+  <section>
     <h2>Skills</h2>
-    <ul>
-      <li>Frontend: HTML, CSS, JavaScript, React</li>
-      <li>Backend: Python, Java, Node.js</li>
-      <li>Databases: MySQL, MongoDB</li>
-      <li>Cloud & DevOps: AWS, Docker, GitHub</li>
-      <li>AI/ML: TensorFlow, PyTorch, OpenCV</li>
-    </ul>
+    <div class="skills">
+      <div class="card"><h3>Languages</h3><p>Python, Java, JavaScript, SQL</p></div>
+      <div class="card"><h3>Frameworks</h3><p>React, Node.js, Express, PyTorch</p></div>
+      <div class="card"><h3>Tools</h3><p>GitHub, Docker, AWS, Streamlit</p></div>
+    </div>
   </section>
 
-  <!-- ===== Projects Section ===== -->
-  <section id="projects">
+  <section>
     <h2>Projects</h2>
-    <div class="project">
-      <h3>AI Interactive System for Remote Sensing Change Detection and Analysis</h3>
-      <p>
-        Developed a deep learning system for analyzing satellite images to detect urban 
-        and vegetation changes using PyTorch.
-      </p>
-    </div>
-    <div class="project">
-      <h3>Multi-Currency Expense Tracker</h3>
-      <p>
-        A responsive web app to track expenses across multiple currencies with real-time 
-        conversion, built with React and Node.js.
-      </p>
+    <div class="projects">
+      <div class="card">
+        <h3>AI Interactive System for Remote Sensing Change Detection</h3>
+        <p>Developed a deep learning-based application to analyze urban change detection using satellite imagery.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-Currency Expense Tracker</h3>
+        <p>Built a responsive web app for managing expenses across multiple currencies with visualization support.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Certificates Section ===== -->
-  <section id="certificates">
-    <h2>Certifications & Achievements</h2>
-    <div class="cert-grid">
-      <img src="certificate1.jpg" alt="Certificate 1">
-      <img src="certificate2.jpg" alt="Certificate 2">
-      <img src="certificate3.jpg" alt="Certificate 3">
-      <img src="certificate4.jpg" alt="Certificate 4">
+  <section>
+    <h2>Certificates</h2>
+    <div class="certificates">
+      <!-- Replace these image sources with your real certificate image paths -->
+      <img src="cert1.png" alt="Certificate 1">
+      <img src="cert2.png" alt="Certificate 2">
+      <img src="cert3.png" alt="Certificate 3">
     </div>
   </section>
 
-  <!-- ===== Contact Section ===== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📞 8328546896</p>
-    <p>✉️ <a href="mailto:syedasiya654@gmail.com">syedasiya654@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/asiya-begum-561471296" target="_blank">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/asiyaeng" target="_blank">GitHub</a></p>
-  </section>
+  <footer>
+    <p>📧 syedasiya654@gmail.com | 🔗 
+      <a href="https://www.linkedin.com/in/asiya-begum-561471296" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/asiyaeng" target="_blank">GitHub</a>
+    </p>
+    <p>&copy; 2025 Asiya Begum</p>
+  </footer>
 
 </body>
 </html>
+
+
